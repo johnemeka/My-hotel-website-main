@@ -1,0 +1,241 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: 140vh;  /* Adjust height based on screen size */
+    background-image: url(SFinteriors-27-c01c7c29bea14f859c0f2093ca2092bc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    width: 85%;
+    padding: 35px 0;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    color: rgb(241, 140, 7);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(241, 140, 7);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.navbar ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: #e68d5e;
+    bottom: -10px;
+    left: 0;
+    transform: 0.4s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Banner Text */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(241, 140, 7);
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    font-size: 40px;
+    font-weight: 200;
+    margin: 20px auto;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border: 4px solid #e68d5e;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bolder;
+    color: #e68d5e;
+    font-size: larger;
+}
+
+/* Section Styles */
+#bedroom, #THE_LIVING_ROOM, #KITCHEN, #The_EXTERIOR_VIEW {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.pic {
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Ensure images don't become too large */
+}
+
+.talk {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    color: rgb(240, 137, 3);
+    line-height: 50px;
+    margin: 20px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .content p {
+        font-size: 28px;
+    }
+
+    .pic {
+        flex-direction: column;
+    }
+
+    .pic img {
+        width: 100%;
+    }
+
+    button {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content p {
+        font-size: 24px;
+    }
+
+    button {
+        width: 130px;
+        font-size: 12px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .pic {
+        flex-direction: column;
+    }
+
+    .pic img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Large Screens (Desktops and above) */
+@media (min-width: 1024px) {
+    .navbar ul {
+        justify-content: space-between;
+    }
+
+    .content h1 {
+        font-size: 80px;
+    }
+
+    .content p {
+        font-size: 45px;
+    }
+
+    .pic {
+        flex-direction: row;
+    }
+
+    .pic img {
+        width: 50%;
+    }
+
+    button {
+        width: 200px;
+    }
+}
+
+
+
